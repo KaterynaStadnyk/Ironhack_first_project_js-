@@ -18,8 +18,8 @@ class Background {
       
       setup() {
         
-        this.bg = loadImage("images/moss-iRF0psyhz10-unsplash.jpg");
-        createCanvas(900, 540);
+        this.bg = loadImage("assets/moss-iRF0psyhz10-unsplash.jpg");
+        // createCanvas(900, 540);
       }
       
       draw() {

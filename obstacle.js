@@ -1,62 +1,56 @@
 const cocktails = [
     {
-        name: "cuba libre",
-        ingredients: ["coke", "rhum"]
+        name: "Cuba Libre",
+        ingredients: ["coke", "rum" , "limes"]
     },
     {
-        name: "moscow mule",
-        ingredients: ["vodka", "ginger beer"]
+        name: "Moscow Mule",
+        ingredients: ["vodka", "ginger beer", "cucumber"]
+    },
+    {
+        name: "Screwdriver",
+        ingredients: ["vodka", "orangejuice"]
+    },
+    {
+        name: "Vodka-E",
+        ingredients: ["vodka", "energy"]
+    },
+    {
+        name: "Skinny Bitch",
+        ingredients: ["vodka", "soda"]
     }
 ]
 
-const ingredients = ["coke", "rhum", "vodka", "ginger beer"]
+
+
 
 
 class Obstacle { 
-    constructor() {
-    this.width = random(50, 150);
-    this.height = random(50,150);
+    constructor(ingName, ingImg) {
+    this.width = 80;
+    this.height = 80;
     this.y = 0;
     this.x = random(0,width); 
 
-    this.ingredient = ingredients[Math.floor(Math.random() * ingredients.length)]
+    this.ingredient = ingName
+    this.img = ingImg
 
-    this.r = random(255);
-    this.g = random(255);
-    this.b = random(255);
-    // let colours = ["red", "orange", "yellow", "blue", "lila", "pink"]
-      
+    // this.r = random(255);
+    // this.g = random(255);
+    // this.b = random(255);
+
+    this.angle = 0;
     }
-  
-//     draw() {
-//         rect(this.x, this.y, this.width, this.height); 
-//         this.y += 4 ; 
-      
-//     }
-//   }
 
-    // constructor() {
-    //     let colours = r,g,b;
-    //     // this.colour = ["red", "orange", "yellow", "blue", "lila", "pink"];
-    //     // this.width = random(50, 150);
-    //     // this.height = random(50,150);
-    //     // this.y = 0;
-    //     // this.x = random(0,width); 
-    // }
-
-    setup(){
- 
-    }
-    
     draw() {
-        // let colours = ["red", "orange", "yellow", "blue", "lila", "pink"];
         
-        this.y += 4;
-        fill(this.r, this.g, this.b);
-        ellipse(this.x, this.y, this.width, this.height);
-        // console.log(this.ingredient)
-        fill("white")
-        text(this.ingredient, this.x, this.y)
-        // this.colour = random(fill(this.colour)); 
+        this.y += 2;
+        // fill(this.r, this.g, this.b);
+        // rect(this.x, this.y, this.width, this.height);
+        image(this.img, this.x, this.y, this.width, this.height)
+        
+        // fill("white")
+        // text(this.ingredient, this.x, this.y)
+        
     }
 }

@@ -1,26 +1,34 @@
 class Player {
     constructor() {
         this.x = 500;
-        this.y = 400;
-        this.angle = 0;
+        this.y = window.innerHeight - 150;
+        //this.angle = 0;
+        // this.playerImg; 
     }
+
     preload() {
-        this.playerImg = loadimage()
+        this.playerImg = loadImage("./assets/bartender.png")
     }
+
+    
     setup() {
         this.targetX = width / 2;
         this.targetY = 0;
+        // this.playerImg = this.playerImg, 0,0;
+        //this.playerImg = loadImage('./assets/bartender.png');
+
     }
+
+
     draw() {
         fill("red");
-        rect(this.x, this.y, 100, 100);
+        // rect(this.x, this.y, 100, 100);
         push();
         translate(this.x + 50, this.y);
+        image(this.playerImg, 0 ,0, 100,140)
         rotate(this.angle);
         fill("black");
-        strokeWeight(2);
-        stroke(126);
-        line(0, 0, 0, -20);
+        
         pop();
 
     }
