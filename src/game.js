@@ -55,9 +55,11 @@ class Game {
             this.shootedIng.forEach(ing => {
                 if (this.match.includes(ing)){
                     this.score += 10;
+                    document.getElementById("score-value").innerText = (this.score)
                 } else {
                     if(this.score >= 10){
                         this.score -= 10;
+                        document.getElementById("score-value").innerText = (this.score)
                     }
                     this.matchNum ++;
                     let wrong = document.querySelector("#wrong");
