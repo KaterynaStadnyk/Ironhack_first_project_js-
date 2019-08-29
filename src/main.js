@@ -31,10 +31,6 @@ const ingredients = [
         img:"assets/kisspng-ginger-beer-fizzy-drinks-root-beer-cream-soda-beer-5acca52e88e552.6297660415233610705607.png"
     },
     {
-        name: "orangejuice",
-        img:"assets/kisspng-ginger-beer-fizzy-drinks-root-beer-cream-soda-beer-5acca52e88e552.6297660415233610705607.png"
-    },
-    {
         name: "cucumber",
         img:"assets/kisspng-cucumber-extract-vegetable-salad-food-cucumber-5a707627232bb5.9323140615173197191441.png"
     },

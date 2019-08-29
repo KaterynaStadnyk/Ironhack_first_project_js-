@@ -14,7 +14,6 @@ class Obstacle {
     }
 
     draw() {
-        console.log(width)
         this.y += 2;
         
         image(this.img, this.x, this.y, this.width, this.height)

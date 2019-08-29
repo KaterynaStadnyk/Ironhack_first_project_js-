@@ -27,21 +27,43 @@ class Bullet {
 //    }
 
 collisionCheck(obsArr) {
+
+
+    /*
+    IF GOOD INGREDIENT SCORE += 10
+    IF WRONG INGREDIENT SCORE -= 10, NEW ORDER, DISPLAY MESSAGE
+    IF ALL GOOD INGREDIENTS FOR ORDER SCORE += 100
+    */
     
     obsArr.forEach((obs, i) => {
-        // console.log(this.y)
         if(this.y <= obs.y + obs.height && obs.x <= this.x && this.x <= obs.x + obs.width){
-            console.log('collision!!!!')
-            if (!game.shootedIng.includes(obs.ingredient)){
-                game.shootedIng.push(obs.ingredient)
-                game.scoring()
+            console.log(game.match, obs.ingredient)
+            if (!game.match.includes(obs.ingredient) ){
+                game.matchNum++;
+                game.shootedIng = [];
+                game.match = cocktails[game.matchNum % cocktails.length].ingredients;
+                if (game.score >= 10) {
 
+                    game.score -= 10;
+                    
+                    let wrong = document.querySelector("#wrong");
+                    wrong.style.display = "block"; 
+                    setTimeout(() => {
+                        wrong.style.display = "none"; 
+                    }, 1000)
+                }
+                
+            } else if(game.match.includes(obs.ingredient)) {
+                // console.log(obs.ingredient, game.shootedIng)
+                if(!game.shootedIng.includes(obs.ingredient)) {
+                    game.shootedIng.push(obs.ingredient)
+                    game.score += 10;
+                }
             }
             
             obsArr.splice(i,1)
             
-            return true
-            //this.exist = false
+            // return true
         }
         
         

@@ -6,7 +6,7 @@ class Player {
     }
 
     preload() {
-        this.playerImg = loadImage("./assets/bartender.png")
+        this.playerImg = loadImage("assets/bartender.png")
     }
 
     

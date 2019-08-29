@@ -34,7 +34,7 @@ class Game {
         this.shootedIng = []; 
         this.matchNum=0;
         this.score = 0; 
-        this.match = cocktails[this.matchNum % cocktails.length].ingredients;
+        this.match = cocktails[this.matchNum].ingredients;
     }
     setup() {
         this.background.setup();
@@ -51,34 +51,16 @@ class Game {
         document.getElementById("score-value").innerText = (this.score)
             
         }
-        scoring() {
-            this.shootedIng.forEach(ing => {
-                if (this.match.includes(ing)){
-                    this.score += 10;
-                    document.getElementById("score-value").innerText = (this.score)
-                } else {
-                    if(this.score >= 10){
-                        this.score -= 10;
-                        document.getElementById("score-value").innerText = (this.score)
-                    }
-                    this.matchNum ++;
-                    let wrong = document.querySelector("#wrong");
-                    wrong.style.display = "block"; 
-                    setTimeout(() => {
-                        wrong.style.display = "none"; 
-                    }, 1000)
-                    }
-                
-            })
-}
         
         checkMatch() {
-            let shout = this.shootedIng.filter(x => {
-                return this.match.includes(x)
-            })
-            if(this.match.length === shout.length){
+            // let shout = this.shootedIng.filter(x => {
+            //     return this.match.includes(x)
+            // })
+            // console.log(this.match.length, this.shootedIng.length)
+            if(this.match.length === this.shootedIng.length){
                 this.shootedIng = [];
                 this.matchNum ++;
+                this.match = cocktails[this.matchNum % cocktails.length].ingredients;
                 this.score += 100;
                 console.log('WINNER')
             }
