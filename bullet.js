@@ -34,11 +34,13 @@ collisionCheck(obsArr) {
             console.log('collision!!!!')
             if (!game.shootedIng.includes(obs.ingredient)){
                 game.shootedIng.push(obs.ingredient)
+                game.scoring()
+
             }
             
             obsArr.splice(i,1)
             
-            
+            return true
             //this.exist = false
         }
         

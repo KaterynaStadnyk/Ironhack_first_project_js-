@@ -59,7 +59,7 @@ function draw() {
     if (bullets.length) {
         bullets.forEach(function (element, index) {
             element.draw()
-            element.collisionCheck(obstacles)
+            if(element.collisionCheck(obstacles)) bullets.splice(index, 1);
             if (element.y  <= 0) {
                 bullets.splice(index, 1);
               }
@@ -87,10 +87,10 @@ function draw() {
 function move() {
 
     if (keyIsDown(LEFT_ARROW) && game.player.x > 0) {
-        game.player.x -= 3;
+        game.player.x -= 10;
         
     } else if (keyIsDown(RIGHT_ARROW) && game.player.x + 100 < width) {
-        game.player.x += 3;
+        game.player.x += 10;
     }
 }
 

@@ -1,25 +1,25 @@
-const cocktails = [
-    {
-        name: "Cuba Libre",
-        ingredients: ["coke", "rum" , "limes"]
-    },
-    {
-        name: "Moscow Mule",
-        ingredients: ["vodka", "ginger beer", "cucumber"]
-    },
-    {
-        name: "Screwdriver",
-        ingredients: ["vodka", "orangejuice"]
-    },
-    {
-        name: "Vodka-E",
-        ingredients: ["vodka", "energy"]
-    },
-    {
-        name: "Skinny Bitch",
-        ingredients: ["vodka", "soda"]
-    }
-]
+// const cocktails = [
+//     {
+//         name: "Cuba Libre",
+//         ingredients: ["coke", "rum" , "limes"]
+//     },
+//     {
+//         name: "Moscow Mule",
+//         ingredients: ["vodka", "ginger beer", "cucumber"]
+//     },
+//     {
+//         name: "Screwdriver",
+//         ingredients: ["vodka", "orangejuice"]
+//     },
+//     {
+//         name: "Vodka-E",
+//         ingredients: ["vodka", "energy"]
+//     },
+//     {
+//         name: "Skinny Bitch",
+//         ingredients: ["vodka", "soda"]
+//     }
+// ]
 
 
 
