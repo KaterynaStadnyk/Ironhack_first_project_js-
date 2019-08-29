@@ -6,7 +6,7 @@ function preload() {
 }
 function setup() {
     console.log("P5 Setup");
-    // createCanvas(900, 540);
+    
     createCanvas(window.innerWidth, window.innerHeight)
     game.setup();
 
@@ -48,6 +48,10 @@ const ingredients = [
     {
         name: "soda",
         img:"assets/kisspng-water-bottles-bottled-water-glass-bottle-5b279a54cf9fd7.1166890915293220688504.png"
+    },
+    {
+        name: "orange juice",
+        img:"assets/kisspng-orange-juice-soft-drink-apple-juice-orange-juice-5a703976cf5888.8346758015173041828493.png"
     }
 ]
 function draw() {

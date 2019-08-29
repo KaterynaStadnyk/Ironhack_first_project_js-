@@ -16,7 +16,7 @@ class Bullet {
         
     }
 
-//     const ingredients = ["coke", "rhum", "vodka", "ginger beer"]
+
 
 // for(i=0;i<cocktails.length;i++){
 //     if(cocktails[i][0]==='Right ingredients'){
